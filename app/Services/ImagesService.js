@@ -4,9 +4,7 @@ import Image from "../Models/Image.js";
 
 class ImagesService {
   async collectImage() {
-
     let response = await sandboxApi.get('images')
-    console.log(response.data)
     ProxyState.image = new Image(response.data)
   }
 }

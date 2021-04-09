@@ -9,7 +9,7 @@ function _drawImage() {
 }
 
 //Public
-export default class ImagessController {
+export default class ImagesController {
   constructor() {
     ProxyState.on("image", _drawImage);
     this.collectImage()

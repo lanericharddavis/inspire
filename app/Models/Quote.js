@@ -1,12 +1,15 @@
-// export default class Quote {
-//   constructor(url) {
-//     this.url = url
-//   }
+export default class Quote {
+  constructor({ content, author }) {
+    this.content = content
+    this.author = author
+  }
 
-//   get imageTemplate() {
-//     return /*html*/`
-//     <h3>Image</h3>
-//     <div style= "background-image: url('${this.url}')"></div>
-//     `
-//   }
-// }
+  // get quoteTemplate() {
+  //   return `
+  //     <div>
+  //       <p>${this.content}</p>
+  //       <p>${this.author}</p>
+  //     </div>
+  // `
+  // }
+}
