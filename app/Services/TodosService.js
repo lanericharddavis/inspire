@@ -10,7 +10,13 @@ class TodosService {
     ProxyState.todos = [...ProxyState.todos, new Todo(response.data)]
     console.log(ProxyState.todos)
   }
+
+  async getTodos() {
+    let response = await sandboxApi.get('lane/todos')
+    ProxyState.todos = response.data.map(t => new Todo(t))
+  }
 }
+
 
 export const todosService = new TodosService();
 

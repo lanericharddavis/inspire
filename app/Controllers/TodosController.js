@@ -10,11 +10,20 @@ function _drawTodo() {
   document.getElementById("todoItem").innerHTML = template
 }
 
+// function _drawTodoItems() {
+//   let template = ''
+//   ProxyState.todos.forEach(t => template += t.todoTemplate)
+//   document.getElementById("todoItem").innerHTML = template
+// }
+
 //Public
 export default class TodosController {
   constructor() {
     ProxyState.on("todos", _drawTodo);
-    _drawTodo()
+    // this.addTodo()
+    this.getTodos()
+    // _drawTodo()
+    // _drawTodoItems()
   }
 
   async addTodo() {
@@ -24,6 +33,14 @@ export default class TodosController {
       let todoItem = { description: form['todoItem'].value }
       await todosService.addTodo(todoItem)
       form.reset()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  async getTodos() {
+    try {
+      await todosService.getTodos()
     } catch (error) {
       console.error(error)
     }
