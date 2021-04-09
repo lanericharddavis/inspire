@@ -4,10 +4,8 @@ export default class Todo {
     this.description = description
   }
 
-  get Template() {
+  // get todoTemplate() {
 
-    return /*html*/`
-
-        `
-  }
+  //   return /*html*/
+  // }
 }

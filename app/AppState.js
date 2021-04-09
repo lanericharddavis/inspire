@@ -5,6 +5,8 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   /** @type {Todo[]} */
   todos = []
+
+  images = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
