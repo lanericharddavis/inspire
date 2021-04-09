@@ -30,25 +30,30 @@
             <div id="quoteHere" class="col-3">
                 <!--Quote Generated Here-->
             </div>
-            <div class="col-3">
-                <h3>To Dos</h3>
-                <div id="todoItem" class="card shadow" style="width: 18rem;">
-                    <!--To Do Item Generated-->
-                    <form>
-                        <div class="row">
-                            <div class="col">
-                                <input onsubmit="" type="text" class="form-control" placeholder="To Do Item..."
-                                    maxlength="30">
-                                <button type="submit"><i class="btn btn-success fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
             <div id="weatherHere" class="col-3">
                 <!--Weather Generated Here-->
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <h3>To Dos</h3>
+
+                <div class="card shadow bg-dark" style="width: 18rem;">
+                    <div id="todoItem" class="col-3">
+                        <!--To Do Item Generated-->
+                    </div>
+                    <form onsubmit="app.todosController.addTodo()">
+                        <div class="form-group">
+                            <label for="todoItem"></label>
+                            <input type="text" class="form-control" id="todoItem" placeholder="To Do Item..."
+                                maxlength="30">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add To Do</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
 
     </main>
 
