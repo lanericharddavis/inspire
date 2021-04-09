@@ -4,17 +4,14 @@ import { imagesService } from "../Services/ImagesService.js";
 
 //Private
 function _drawImage() {
-  let images = ProxyState.images;
-  let template = ''
-  images.forEach(i => template += i.template)
-  document.getElementById("imageGoesHere").innerHTML = `<div style="background-image: url('${this.url}')"></div>`
+  let image = ProxyState.image;
+  document.body.style.backgroundImage = `url(${image.url})`;
 }
 
 //Public
 export default class ImagessController {
   constructor() {
-    ProxyState.on("images", _drawImage);
-    _drawImage()
+    ProxyState.on("image", _drawImage);
     this.collectImage()
   }
 
