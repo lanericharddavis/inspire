@@ -4,13 +4,10 @@ import { weathersService } from "../Services/WeathersService.js";
 
 //Private
 function _drawWeather() {
-  document.getElementById('weatherHere').innerHTML = `
-      <div>
-        <p>${ProxyState.weather.temp}</p>
-        <p>${ProxyState.weather.weather}</p>
-        <p>${ProxyState.weather.location}</p>
-      </div>
-  `;
+
+  document.getElementById('weatherHere').innerHTML = ProxyState.weather.weatherTemplate;
+
+
 }
 
 //Public
@@ -28,10 +25,16 @@ export default class WeathersController {
     }
   }
 
+  // toggleWeather(temp) {
+  //   let fahrenhiet = Math.floor(((temp - 273.15) * 1.8) + 32)
+  //   let celsius = Math.floor(temp - 273.15)
+  //   tempToggle = document.getElementById("weatherHere");
+  //   if (tempToggle.innerHTML === fahrenhiet) {
+  //     tempToggle.innerHTML = celsius;
+  //   } else {
+  //     x.innerHTML = fahrenhiet;
+  //   }
+  // }
+
 }
 
-// kelvin to Fahrenheit
-// ((K - 273.15) * 1.8) + 32
-
-// kelvin to Celsius
-// K - 273.15

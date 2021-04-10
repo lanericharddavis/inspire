@@ -10688,7 +10688,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: white;
+  background: contain;
 }
 
 main {
@@ -10696,16 +10696,21 @@ main {
 }
 
 .grey-transparent {
-  background:rgba(0, 0, 0, 0.3)
+  background:rgba(0, 0, 0, 0.4)
 }
 
-.quote-author {
+.divForHidden {
+  background-color: transparent;
+}
+
+.author {
+  font-size:small;
   color: transparent;
   transition: all 1s;
   animation: fadeIn ease 2s;
 }
 
-.the-quote:hover .quote-author {
+.divForHidden:hover .author {
   color: unset;
 }
 
@@ -10716,6 +10721,13 @@ main {
   100% {
     opacity: 1;
   }
+}
+
+
+.clock{
+  text-shadow: 1px 1px #000000;
+  font-size:5rem;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

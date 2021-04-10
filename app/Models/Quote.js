@@ -4,12 +4,12 @@ export default class Quote {
     this.author = author
   }
 
-  // get quoteTemplate() {
-  //   return `
-  //     <div>
-  //       <p>${this.content}</p>
-  //       <p>${this.author}</p>
-  //     </div>
-  // `
-  // }
+  get quoteTemplate() {
+    return `
+      <div class="divForHidden">
+        <h6 class="quote">"${this.content}"</h6>
+        <p class="author text-center">-${this.author}</p>
+      </div>
+  `
+  }
 }
