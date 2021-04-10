@@ -20,8 +20,8 @@ function _drawTodo() {
 export default class TodosController {
   constructor() {
     ProxyState.on("todos", _drawTodo);
-    // this.addTodo()
     this.getTodos()
+    // this.addTodo()
     // _drawTodo()
     // _drawTodoItems()
   }
@@ -46,4 +46,13 @@ export default class TodosController {
     }
   }
 
+  async deleteTodo(id) {
+    try {
+      window.confirm('Confirm Delete Item')
+      await todosService.deleteTodo(id)
+    } catch (error) {
+      console.error(error)
+    }
+
+  }
 }

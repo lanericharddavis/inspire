@@ -10695,5 +10695,27 @@ main {
   flex-grow: 1;
 }
 
+.grey-transparent {
+  background:rgba(0, 0, 0, 0.3)
+}
+
+.quote-author {
+  color: transparent;
+  transition: all 1s;
+  animation: fadeIn ease 2s;
+}
+
+.the-quote:hover .quote-author {
+  color: unset;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

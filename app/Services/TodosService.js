@@ -1,6 +1,6 @@
 import { ProxyState } from "../AppState.js";
-import Todo from "../Models/Todo.js";
 import { sandboxApi } from "./AxiosService.js";
+import Todo from "../Models/Todo.js";
 
 class TodosService {
   async addTodo(todoItem) {
@@ -15,6 +15,12 @@ class TodosService {
     let response = await sandboxApi.get('lane/todos')
     ProxyState.todos = response.data.map(t => new Todo(t))
   }
+
+  async deleteTodo(id) {
+    await sandboxApi.delete('lane/todos/' + id)
+    ProxyState.todos = ProxyState.todos.filter(todo => todo._id != id)
+  }
+
 }
 
 

@@ -6,8 +6,8 @@ import { quotesService } from "../Services/quotesService.js";
 function _drawQuote() {
   document.getElementById('quoteHere').innerHTML = `
       <div>
-        <p>${ProxyState.quote.content}</p>
-        <p>${ProxyState.quote.author}</p>
+        <p class="the-quote">${ProxyState.quote.content}</p>
+        <p class="quote-author">${ProxyState.quote.author}</p>
       </div>
   `;
 }
