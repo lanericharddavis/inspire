@@ -29,3 +29,9 @@ export default class WeathersController {
   }
 
 }
+
+// kelvin to Fahrenheit
+// ((K - 273.15) * 1.8) + 32
+
+// kelvin to Celsius
+// K - 273.15
