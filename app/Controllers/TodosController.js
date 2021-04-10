@@ -53,6 +53,13 @@ export default class TodosController {
     } catch (error) {
       console.error(error)
     }
+  }
 
+  async toggleTodo(id) {
+    try {
+      await todosService.toggleTodo(id)
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
