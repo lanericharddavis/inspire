@@ -4,10 +4,7 @@ import { weathersService } from "../Services/WeathersService.js";
 
 //Private
 function _drawWeather() {
-
   document.getElementById('weatherHere').innerHTML = ProxyState.weather.weatherTemplate;
-
-
 }
 
 //Public
@@ -25,16 +22,9 @@ export default class WeathersController {
     }
   }
 
-  // toggleWeather(temp) {
-  //   let fahrenhiet = Math.floor(((temp - 273.15) * 1.8) + 32)
-  //   let celsius = Math.floor(temp - 273.15)
-  //   tempToggle = document.getElementById("weatherHere");
-  //   if (tempToggle.innerHTML === fahrenhiet) {
-  //     tempToggle.innerHTML = celsius;
-  //   } else {
-  //     x.innerHTML = fahrenhiet;
-  //   }
-  // }
+  toggleWeather() {
+    weathersService.toggleWeather()
+  }
 
 }
 

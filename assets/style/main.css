@@ -10723,6 +10723,11 @@ main {
   }
 }
 
+#weatherHere{
+  background:rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+
+}
 
 .clock{
   text-shadow: 1px 1px #000000;
