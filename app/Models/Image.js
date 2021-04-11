@@ -1,6 +1,6 @@
 export default class Image {
-  constructor({ url }) {
-    this.url = url
+  constructor({ large_url }) {
+    this.url = large_url
   }
 
 }

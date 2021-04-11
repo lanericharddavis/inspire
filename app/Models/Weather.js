@@ -20,11 +20,16 @@ export default class Weather {
     let F = `*F`
     let C = `*C`
     return `
-      <div>
-        <h5 class="text-center" onclick="app.weathersController.toggleWeather()">${this.currentState ? celsius : fahrenhiet} ${this.currentState ? C : F}</h5>
-        <h7>${this.weather} in ${this.location}</h7>
-        <p></p>
+      <div class="row">
+        <div class="col text-center"
+          <p class="tempDegrees" onclick="app.weathersController.toggleWeather()">${this.currentState ? celsius : fahrenhiet} ${this.currentState ? C : F}</p>
+        </div>
       </div >
+      <div class="row">
+        <div class="col text-center">
+          <p class="weatherStatus pb-2">${this.weather} in ${this.location}</p>
+        </div>
+      </div>
   `
   }
 
