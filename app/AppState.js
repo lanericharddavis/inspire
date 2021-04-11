@@ -6,6 +6,7 @@ class AppState extends EventEmitter {
   /** @type {Todo[]} */
   todos = []
 
+
   image = null
 
   quote = {}

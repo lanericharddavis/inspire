@@ -10,20 +10,25 @@ function _drawTodo() {
   document.getElementById("todoItem").innerHTML = template
 }
 
-// function _drawTodoItems() {
-//   let template = ''
-//   ProxyState.todos.forEach(t => template += t.todoTemplate)
-//   document.getElementById("todoItem").innerHTML = template
-// }
+function _drawStillTodo() {
+  let todos = ProxyState.todos;
+  let totalTodos = ProxyState.todos.length
+  let checked = 0
+  todos.forEach(t => {
+    if (t.completed === true) {
+      checked += 1
+    }
+  })
+  document.getElementById("stillTodo").innerHTML = `List: ${checked}/${totalTodos}`
+}
+
 
 //Public
 export default class TodosController {
   constructor() {
     ProxyState.on("todos", _drawTodo);
+    ProxyState.on("todos", _drawStillTodo)
     this.getTodos()
-    // this.addTodo()
-    // _drawTodo()
-    // _drawTodoItems()
   }
 
   async addTodo() {
