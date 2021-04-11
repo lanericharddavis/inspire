@@ -10701,6 +10701,7 @@ main {
 
 .divForHidden {
   background-color: transparent;
+  cursor: pointer;
 }
 
 .author {
@@ -10723,6 +10724,9 @@ main {
   }
 }
 
+#getInspired, #tempChange{
+  cursor: pointer;
+}
 
 .clock{
   text-shadow: 1px 1px #000000;

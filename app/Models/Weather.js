@@ -22,7 +22,7 @@ export default class Weather {
     return `
       <div class="row">
         <div class="col text-center"
-          <p class="tempDegrees" onclick="app.weathersController.toggleWeather()">${this.currentState ? celsius : fahrenhiet} ${this.currentState ? C : F}  ||  ${this.weather} in ${this.location}</p>
+          <p id="tempChange" class="tempDegrees" onclick="app.weathersController.toggleWeather()">${this.currentState ? celsius : fahrenhiet} ${this.currentState ? C : F}  ||  ${this.weather} in ${this.location}</p>
         </div>
       </div >
   `
