@@ -17,19 +17,19 @@
 <body>
     <!--Image Generated As Background-->
     <header class="container=fluid">
-        <nav class="navbar navbar-expand bg-transparent text-white p-5 justify-content-between">
+        <nav class="navbar navbar-expand bg-transparent text-white justify-content-between mt-1 pb-5">
             <a class="navbar-brand">
-                <span class="ml-2 text-white" onclick="app.quotesController.collectQuote()">Get Inspired</span>
+                <span class="text-white" onclick="app.quotesController.collectQuote()">Get Inspired</span>
             </a>
-            <div id="weatherHere" class="col-2 justify-content-center p-4">
+            <div id="weatherHere" class="col-2 justify-content-center pb-5">
                 <!--Weather Generated Here-->
             </div>
         </nav>
     </header>
 
 
-    <main class="container-fluid">
-        <div class="row">
+    <main class="container-fluid pt-5">
+        <div class="row pt-5">
             <div class="col text-center">
                 <div id="MyClockDisplay" class="clock" onload="showTime()">
                 </div>
@@ -38,11 +38,7 @@
         <div class="row">
             <div class="col-2">
             </div>
-            <div class="col-7 d-flex align-items-end">
-                <div id="quoteHere" class="col text-light">
-                    <!--Quote Generated Here-->
-                </div>
-            </div>
+            <div class="col-7"></div>
             <div class="col-3">
                 <h5 class="text-white">To Dos</h5>
                 <div class="card shadow grey-transparent justify-content-between" style="width: 14rem;">
@@ -70,8 +66,13 @@
 
     <footer class="container-fluid bg-transparent text-light">
         <div class="row">
-            <div class="col-2">
+            <div class="col-3">
                 <p><small>Created by Lane Davis</small></p>
+            </div>
+            <div class="col-8 d-flex align-items-end">
+                <div id="quoteHere" class="col text-light">
+                    <!--Quote Generated Here-->
+                </div>
             </div>
         </div>
     </footer>

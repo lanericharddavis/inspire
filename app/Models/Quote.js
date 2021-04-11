@@ -8,7 +8,7 @@ export default class Quote {
     return `
       <div class="divForHidden">
         <h6 class="quote">"${this.content}"</h6>
-        <p class="author text-center">-${this.author}</p>
+        <p class="author">-${this.author}</p>
       </div>
   `
   }
